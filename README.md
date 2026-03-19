@@ -11,10 +11,10 @@ schemas/x-intent/v1/schema.json
 ## Examples
 
 ```
-examples/minimal.json
-examples/read-only.json
 examples/draft-mutate.json
 examples/external-financial-high-risk.json
+examples/minimal.json
+examples/read-only.json
 ```
 
 ## Fields

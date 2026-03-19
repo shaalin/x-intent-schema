@@ -54,7 +54,7 @@ Consumers can validate x-intent documents by fetching the schema from the publis
 
 ```bash
 # Fetch schema and validate locally
-curl -O https://your-domain/schemas/x-intent/v1/schema.json
+curl -O https://shaalin.github.io/x-intent-schema/schemas/x-intent/v1/schema.json
 python validate.py
 ```
 

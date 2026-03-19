@@ -63,6 +63,7 @@
         "data": {
           "type": "object",
           "additionalProperties": false,
+          "minProperties": 1,
           "properties": {
             "class": {
               "$ref": "#/$defs/dataClass"
