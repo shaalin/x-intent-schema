@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/x-intent/v1/schema.json",
+  "title": "x-intent",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["ver", "operation_class", "effects"],
+  "properties": {
+    "ver": {
+      "type": "string",
+      "enum": ["1"],
+      "description": "x-intent schema version"
+    },
+    "operation_class": {
+      "type": "string",
+      "minLength": 1,
+      "description": "stable semantic class identifier for the API action performed by this operation"
+    },
+    "effects": {
+      "type": "array",
+      "minItems": 1,
+      "description": "declarative, policy-relevant semantic effects of invoking this operation; cumulative and unordered; not an exhaustive execution trace",
+      "items": { "$ref": "#/$defs/effect" }
+    }
+  },
+  "$defs": {
+    "effectKind": {
+      "type": "string",
+      "enum": [
+        "read",
+        "mutate",
+        "delete",
+        "notify",
+        "external_call",
+        "financial_transfer",
+        "provision",
+        "compute"
+      ]
+    },
+    "risk": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "dataClass": {
+      "type": "string",
+      "enum": ["public", "internal", "confidential", "restricted"]
+    },
+    "effect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind"],
+      "properties": {
+        "kind": {
+          "$ref": "#/$defs/effectKind"
+        },
+        "target": {
+          "type": "string",
+          "description": "affected resource domain, subsystem, or external service in deployment-stable form; not intended for per-request resource instance identifiers"
+        },
+        "risk": {
+          "$ref": "#/$defs/risk"
+        },
+        "data": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "class": {
+              "$ref": "#/$defs/dataClass"
+            },
+            "pii": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    }
+  }
+}

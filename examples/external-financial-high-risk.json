@@ -1,0 +1,29 @@
+{
+  "ver": "1",
+  "operation_class": "billing.refund.create_payout",
+  "effects": [
+    {
+      "kind": "financial_transfer",
+      "target": "payment.processor",
+      "risk": "high",
+      "data": {
+        "class": "restricted",
+        "pii": true
+      }
+    },
+    {
+      "kind": "external_call",
+      "target": "payment.processor",
+      "risk": "high"
+    },
+    {
+      "kind": "mutate",
+      "target": "billing.refund",
+      "risk": "medium",
+      "data": {
+        "class": "confidential",
+        "pii": false
+      }
+    }
+  ]
+}

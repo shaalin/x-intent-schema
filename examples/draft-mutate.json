@@ -1,0 +1,24 @@
+{
+  "ver": "1",
+  "operation_class": "comms.email.create_draft_refund_notice",
+  "effects": [
+    {
+      "kind": "read",
+      "target": "crm.customer",
+      "risk": "low",
+      "data": {
+        "class": "confidential",
+        "pii": true
+      }
+    },
+    {
+      "kind": "mutate",
+      "target": "comms.draft",
+      "risk": "low",
+      "data": {
+        "class": "internal",
+        "pii": false
+      }
+    }
+  ]
+}
