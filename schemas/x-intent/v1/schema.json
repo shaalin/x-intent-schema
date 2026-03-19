@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.org/schemas/x-intent/v1/schema.json",
+  "$id": "https://shaalin.github.io/x-intent-schema/schemas/x-intent/v1/schema.json",
   "title": "x-intent",
   "type": "object",
   "additionalProperties": false,

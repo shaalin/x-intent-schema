@@ -1,0 +1,9 @@
+{
+  "ver": "1",
+  "operation_class": "health.ping",
+  "effects": [
+    {
+      "kind": "read"
+    }
+  ]
+}

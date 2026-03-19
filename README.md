@@ -2,8 +2,6 @@
 
 Operation-level semantic metadata schema for API authorization.
 
-> **Note:** This repo uses `example.org` as a placeholder domain in schema `$id` fields. Replace with your organization's domain before publishing.
-
 ## Schema
 
 ```
@@ -13,6 +11,7 @@ schemas/x-intent/v1/schema.json
 ## Examples
 
 ```
+examples/minimal.json
 examples/read-only.json
 examples/draft-mutate.json
 examples/external-financial-high-risk.json

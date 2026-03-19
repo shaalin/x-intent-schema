@@ -15,5 +15,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Data classification: `public`, `internal`, `confidential`, `restricted`
 - PII indicator for effects
 - Documentation: overview, semantics, publishing guide
-- Example intents: read-only, draft-mutate, external-financial-high-risk
+- Example intents: minimal, read-only, draft-mutate, external-financial-high-risk
 - GitHub Actions workflow for schema validation

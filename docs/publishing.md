@@ -10,13 +10,15 @@ The schema `$id` should be a stable, resolvable URL that remains consistent acro
 https://{your-domain}/schemas/x-intent/v1/schema.json
 ```
 
-### Placeholder Domain
+### Current Domain
 
-This repo uses `example.org` as a placeholder. Before publishing:
+The schema is published via GitHub Pages at:
 
-1. Choose your domain (e.g., `x-intent.dev`, `schemas.yourorg.com`)
-2. Update the `$id` in `schemas/x-intent/v1/schema.json`
-3. Update any documentation references
+```
+https://shaalin.github.io/x-intent-schema/schemas/x-intent/v1/schema.json
+```
+
+To migrate to a custom domain, update the `$id` in `schemas/x-intent/v1/schema.json` and configure DNS.
 
 ## Versioned Paths
 

@@ -1,5 +1,11 @@
 # x-intent Semantics
 
+## ver
+
+The `ver` field contains the major version number as a string. Schema path `/v1/` matches `ver: "1"`.
+
+Documents declare their schema version so validators can select the correct schema. Breaking changes increment the major version.
+
 ## operation_class
 
 A stable semantic identifier for the API action. Use dot-separated naming:
@@ -36,10 +42,11 @@ Kinds are intentionally generic so policies can reason about effect categories w
 
 ## effect.target
 
-The affected resource domain, subsystem, or external service in deployment-stable form.
+A semantic boundary identifying the resource domain—not a runtime scope, IAM resource, or specific object ID.
 
 - Use stable identifiers like `billing.invoice`, `payment.processor`, `crm.customer`
 - **Not per-request instance IDs.** Target identifies the resource *type* or *domain*, not a specific record.
+- **Not IAM resources.** Target is for policy reasoning, not access control binding.
 
 ## Optional Fields
 
