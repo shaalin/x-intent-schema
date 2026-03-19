@@ -1,6 +1,6 @@
 # x-intent
 
-Operation-level semantic metadata schema for API authorization.
+Operation-level semantic metadata schema for API policy and authorization.
 
 ## Canonical URL
 
