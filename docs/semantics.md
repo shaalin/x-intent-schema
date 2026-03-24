@@ -1,4 +1,8 @@
-# x-intent Semantics
+# Operation Semantics Reference
+
+This document defines the fields and rules for structured operation semantics.
+
+> **Note:** This schema is used by both `x-intentops-semantics` (preferred) and `x-intent` (legacy) extensions.
 
 ## ver
 

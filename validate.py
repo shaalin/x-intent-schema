@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Validate example JSON files against the x-intent schema."""
+"""Validate example JSON files against the operation semantics schema.
+
+Validates against the preferred x-intentops-semantics schema by default.
+Use --legacy to validate against the original x-intent schema.
+"""
 
 import json
 import sys
@@ -14,7 +18,15 @@ except ImportError:
 
 def main():
     repo_root = Path(__file__).parent
-    schema_path = repo_root / "schemas" / "x-intent" / "v1" / "schema.json"
+    use_legacy = "--legacy" in sys.argv
+
+    if use_legacy:
+        schema_path = repo_root / "schemas" / "x-intent" / "v1" / "schema.json"
+        print("Using legacy x-intent schema\n")
+    else:
+        schema_path = repo_root / "schemas" / "x-intentops-semantics" / "v1" / "schema.json"
+        print("Using x-intentops-semantics schema\n")
+
     examples_dir = repo_root / "examples"
 
     with open(schema_path) as f:

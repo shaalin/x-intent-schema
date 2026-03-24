@@ -1,24 +1,26 @@
-# Publishing the x-intent Schema
+# Publishing Operation Semantics Schemas
 
-This document describes how to publish the x-intent schema at a stable URL.
+This document describes how to publish the operation semantics schemas at stable URLs.
 
 ## Schema URL Strategy
 
 The schema `$id` should be a stable, resolvable URL that remains consistent across versions:
 
 ```
-https://{your-domain}/schemas/x-intent/v1/schema.json
+https://{your-domain}/schemas/x-intentops-semantics/v1/schema.json  # Preferred
+https://{your-domain}/schemas/x-intent/v1/schema.json               # Legacy
 ```
 
 ### Current Domain
 
-The schema is published via GitHub Pages at:
+The schemas are published via GitHub Pages at:
 
 ```
-https://shaalin.github.io/x-intent-schema/schemas/x-intent/v1/schema.json
+https://shaalin.github.io/x-intent-schema/schemas/x-intentops-semantics/v1/schema.json  # Preferred
+https://shaalin.github.io/x-intent-schema/schemas/x-intent/v1/schema.json               # Legacy
 ```
 
-To migrate to a custom domain, update the `$id` in `schemas/x-intent/v1/schema.json` and configure DNS.
+To migrate to a custom domain, update the `$id` in both schema files and configure DNS.
 
 ## Versioned Paths
 
